@@ -25,7 +25,7 @@ export default function friends(state = initialState, action) {
   switch (action.type) {
 
     case types.ADD_FRIEND:
-      const newId = state.friends[state.friends.length-1] + 1;
+      const newId = state.friends[state.friends.length - 1] + 1;
       return {
         ...state,
         friends: state.friends.concat(newId),
@@ -35,7 +35,7 @@ export default function friends(state = initialState, action) {
             id: newId,
             name: action.name
           }
-        },
+        }
       }
 
     case types.DELETE_FRIEND:

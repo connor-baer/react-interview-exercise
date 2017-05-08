@@ -9,6 +9,7 @@ import { FriendList, AddFriendInput } from '../components';
 @connect(state => ({
   friendlist: state.friendlist
 }))
+
 export default class FriendListApp extends Component {
 
   static propTypes = {
