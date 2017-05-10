@@ -8,7 +8,7 @@ class FriendListItem extends Component {
     return (
       <li className={styles.friendListItem}>
         <div className={styles.friendInfos}>
-          <div><span>{this.props.name}</span></div>
+          <div><span>{this.props.name} </span><i className={classnames('fa', { 'fa-male': this.props.gender === 'male' }, { 'fa-female': this.props.gender === 'female' }, { 'fa-transgender-alt': this.props.gender === 'other' })} /></div>
           <div><small>xx friends in common</small></div>
         </div>
         <div className={styles.friendActions}>

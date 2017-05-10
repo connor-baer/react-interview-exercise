@@ -8,15 +8,18 @@ const initialState = {
   friendsById: {
     1: {
       id: 1,
-      name: 'Theodore Roosevelt'
+      name: 'Eleanor Roosevelt',
+      gender: 'female'
     },
     2: {
       id: 2,
-      name: 'Abraham Lincoln'
+      name: 'Abraham Lincoln',
+      gender: 'male'
     },
     3: {
       id: 3,
-      name: 'George Washington'
+      name: 'George Washington',
+      gender: 'male'
     }
   }
 };
@@ -33,7 +36,8 @@ export default function friends(state = initialState, action) {
           ...state.friendsById,
           [newId]: {
             id: newId,
-            name: action.name
+            name: action.name,
+            gender: action.gender
           }
         },
       }
